@@ -1,0 +1,28 @@
+@page
+@model CommunityApp.Pages.Provinces.IndexModel
+
+<h2>Province List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Province Code</th>
+            <th>Province Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var province in Model.Provinces)
+        {
+            <tr>
+                <td>@province.ProvinceCode</td>
+                <td>@province.ProvinceName</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@province.ProvinceCode">Edit</a> |
+                    <a asp-page="./Delete" asp-route-id="@province.ProvinceCode">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-page="./Create">Add New Province</a>

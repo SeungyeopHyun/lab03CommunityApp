@@ -10,10 +10,12 @@
     <label>Population</label>
     <input type="number" asp-for="City.Population" required />
 
-    <label>Province Code</label>
-    <input type="text" asp-for="City.ProvinceCode" required />
+    <label>Province</label>
+    <select asp-for="City.ProvinceCode" asp-items="Model.ProvinceList" required>
+        <option value="">-- Select Province --</option>
+    </select>
 
-    <button type="submit">Save</button>
+    <button type="submit" class="btn btn-success">Add City</button>
 </form>
 
 <a asp-page="./Index">Back to List</a>

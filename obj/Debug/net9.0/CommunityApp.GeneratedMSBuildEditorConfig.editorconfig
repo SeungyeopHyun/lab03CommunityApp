@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2l0aWVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/seungyeop/Documents/4870/CommunityApp/Pages/Cities/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2l0aWVzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/seungyeop/Documents/4870/CommunityApp/Pages/Cities/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2l0aWVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/seungyeop/Documents/4870/CommunityApp/Pages/Provinces/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvdmluY2VzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/seungyeop/Documents/4870/CommunityApp/Pages/Provinces/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvdmluY2VzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/seungyeop/Documents/4870/CommunityApp/Pages/Provinces/Index.cshtml]

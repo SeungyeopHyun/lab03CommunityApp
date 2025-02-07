@@ -1,7 +1,8 @@
 @page
 @model CommunityApp.Pages.Provinces.IndexModel
 
-<h2>Province List</h2>
+<h2>Provinces</h2>
+
 <table class="table">
     <thead>
         <tr>
@@ -11,18 +12,21 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var province in Model.Provinces)
+        @foreach (var province in Model.ProvinceList)
         {
             <tr>
                 <td>@province.ProvinceCode</td>
                 <td>@province.ProvinceName</td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@province.ProvinceCode">Edit</a> |
-                    <a asp-page="./Delete" asp-route-id="@province.ProvinceCode">Delete</a>
+                    <a asp-page="./Edit" asp-route-provinceCode="@province.ProvinceCode" class="btn btn-primary">Edit</a>
+                    
+                    <form method="post" asp-page="./Index" asp-page-handler="Delete" asp-route-provinceCode="@province.ProvinceCode" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 
-<a asp-page="./Create">Add New Province</a>
+<a asp-page="./Create" class="btn btn-success">Add New Province</a>

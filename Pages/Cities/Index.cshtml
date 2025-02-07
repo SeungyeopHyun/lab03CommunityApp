@@ -1,13 +1,14 @@
 @page
-@model CommunityApp.Pages.Cities.IndexModel 
+@model CommunityApp.Pages.Cities.IndexModel
 
 <h2>City List</h2>
+
 <table class="table">
     <thead>
         <tr>
             <th>City Name</th>
             <th>Population</th>
-            <th>Province Code</th>
+            <th>Province</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -17,10 +18,14 @@
             <tr>
                 <td>@city.CityName</td>
                 <td>@city.Population</td>
-                <td>@city.ProvinceCode</td>
+<td>@(city.Province?.ProvinceName ?? "Unknown")</td>
+
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@city.CityId">Edit</a> |
-                    <a asp-page="./Delete" asp-route-id="@city.CityId">Delete</a>
+<a asp-page="./Edit" asp-route-id="@city.CityId">Edit</a>
+<form method="post" asp-page-handler="Delete" asp-route-id="@city.CityId" onsubmit="return confirm('Are you sure?');">
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
                 </td>
             </tr>
         }

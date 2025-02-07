@@ -431,3 +431,4 @@
 /Users/seungyeop/Documents/4870/CommunityApp/obj/Debug/net9.0/CommunityApp.pdb
 /Users/seungyeop/Documents/4870/CommunityApp/obj/Debug/net9.0/CommunityApp.genruntimeconfig.cache
 /Users/seungyeop/Documents/4870/CommunityApp/obj/Debug/net9.0/ref/CommunityApp.dll
+/Users/seungyeop/Documents/4870/CommunityApp/obj/Debug/net9.0/CommunityApp.sourcelink.json

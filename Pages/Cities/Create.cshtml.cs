@@ -1,7 +1,7 @@
-using CommunityApp.Data;
-using CommunityApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using CommunityApp.Data;
+using CommunityApp.Models;
 
 namespace CommunityApp.Pages.Cities
 {
@@ -9,15 +9,15 @@ namespace CommunityApp.Pages.Cities
     {
         private readonly ApplicationDbContext _context;
 
+        [BindProperty]
+        public City City { get; set; } = new City();
+
         public CreateModel(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        [BindProperty]
-        public City City { get; set; } = new();
-
-        public async Task<IActionResult> OnPostAsync()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
@@ -25,8 +25,9 @@ namespace CommunityApp.Pages.Cities
             }
 
             _context.Cities.Add(City);
-            await _context.SaveChangesAsync();
-            return RedirectToPage("./Index");
+            _context.SaveChanges();
+
+            return RedirectToPage("./Index"); // 리스트 페이지로 이동
         }
     }
 }
